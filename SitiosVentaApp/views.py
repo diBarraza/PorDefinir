@@ -5,14 +5,14 @@ from django.shortcuts import render
 def mostrar_index(request):
     return render(request, '../templates/newsoftMain/index.html')
 
-def mostrar_blog(request):
-    return render(request, '../templates/newsoftMain/blog.html')
+def mostrar_about(request):
+    return render(request, '../templates/newsoftMain/about.html')
 
-def mostrar_portafolio(request):
-    return render(request, '../templates/newsoftMain/portafolio.html')
+def mostrar_feature(request):
+    return render(request, '../templates/newsoftMain/feature.html')
 
-def mostrar_contacto(request):
-    return render(request, '../templates/newsoftMain/contacts.html')
+def mostrar_contact(request):
+    return render(request, '../templates/newsoftMain/contact.html')
 
 def mostrar_template1(request):
     return render(request, '../templates/Template1/index.html')

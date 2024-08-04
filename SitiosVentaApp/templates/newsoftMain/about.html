@@ -1,78 +1,13 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-  <title>Newsoft</title>
-
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway:400,600|Righteous&display=swap"
-    rel="stylesheet" />
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-</head>
-
+{% load static %}
 <body>
+{% include 'newsoftMain/header.html' %}
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              Newsoft
-            </span>
-          </a>
-
-          <div class="navbar-collapse" id="">
-            <div class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3">
-              <form class="form-inline mb-3 mb-lg-0 ">
-                <button class="btn  my-sm-0 nav_search-btn" type="submit"></button>
-              </form>
-              <ul class="navbar-nav  mr-5">
-                <li class="nav-item mr-5">
-                  <a class="nav-link" href="service.html">
-                    <span>Login</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="custom_menu-btn">
-              <button onclick="openNav()">
-                <span class="s-1"> </span>
-                <span class="s-2"> </span>
-                <span class="s-3"> </span>
-              </button>
-            </div>
-            <div id="myNav" class="overlay">
-              <div class="overlay-content">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="feature.html">Features</a>
-                <a href="contact.html">Contact Us</a>
-              </div>
-            </div>
-          </div>
-        </nav>
+	 {% include 'newsoftMain/navbar.html' %}
       </div>
     </header>
     <!-- end header section -->
@@ -83,21 +18,21 @@
   <section class="who_section layout_padding">
     <div class="container who_container">
       <div class="who_img-box">
-        <img src="images/pc.jpg" alt="" />
+	      <img src="{% static 'newsoftMain/images/pc.jpg' %}" alt="" />
       </div>
       <div class="who_deail-box">
         <h2>
-          Who is Newsoft
-        </h2>
+        ¿Quienes somos? 
+	</h2>
+
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodonisi ut aliquip ex ea commodo
-        </p>
+Newsoft es una empresa líder en el desarrollo de software, comprometida con ofrecer soluciones innovadoras y de alta calidad que satisfacen las diversas necesidades de nuestros clientes. Nuestro equipo de desarrolladores y diseñadores expertos trabaja de manera colaborativa para crear software que no solo sea funcional, sino también escalable y fácil de usar. Nos especializamos en una amplia gama de servicios, desde el desarrollo de software personalizado hasta aplicaciones web y móviles, asegurando que cada proyecto esté adaptado a los requerimientos únicos de nuestros clientes.
+
+En Newsoft, damos prioridad a las tecnologías y metodologías más avanzadas para proporcionar a nuestros clientes soluciones de vanguardia. Nuestro compromiso con la excelencia nos impulsa a evolucionar y adaptarnos continuamente al cambiante panorama de la industria del software, asegurando que nos mantengamos a la vanguardia de la innovación.
+
+Creemos en construir relaciones sólidas y duraderas con nuestros clientes, entendiendo sus objetivos de negocio y entregando software que les ayude a alcanzar el éxito. Ya sea que seas una startup buscando lanzar tu primer producto o una empresa establecida que necesita una solución empresarial compleja, Newsoft es tu socio de confianza en el desarrollo de software.
+	</p>
+
         <div>
           <a href="">
             Read More
@@ -339,25 +274,7 @@
   <!-- end info section -->
 
   <!-- footer section -->
-  <section class="container-fluid footer_section">
-    <p>
-      &copy; 2019 All Rights Reserved. Design by
-      <a href="https://html.design/">Free Html Templates</a>
-    </p>
-  </section>
-  <!-- footer section -->
-
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-
-  <script>
-    function openNav() {
-      document.getElementById("myNav").classList.toggle("menu_width");
-      document
-        .querySelector(".custom_menu-btn")
-        .classList.toggle("menu_btn-style");
-    }
-  </script>
+  {% include 'newsoftMain/footer.html'%}
 </body>
 
 </html>
