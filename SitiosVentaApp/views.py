@@ -3,16 +3,16 @@ from django.shortcuts import render
 # Create your views here.
 
 def mostrar_index(request):
-    return render(request, '../templates/main/index.html', {'current_page': 'home'})
+    return render(request, '../templates/newsoftMain/index.html')
 
 def mostrar_blog(request):
-    return render(request, '../templates/main/blog.html', {'current_page': 'blog'})
+    return render(request, '../templates/newsoftMain/blog.html')
 
 def mostrar_portafolio(request):
-    return render(request, '../templates/main/portafolio.html', {'current_page': 'portfolio'})
+    return render(request, '../templates/newsoftMain/portafolio.html')
 
 def mostrar_contacto(request):
-    return render(request, '../templates/main/contacts.html', {'current_page': 'contacto'})
+    return render(request, '../templates/newsoftMain/contacts.html')
 
 def mostrar_template1(request):
     return render(request, '../templates/Template1/index.html')
