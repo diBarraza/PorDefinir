@@ -7,7 +7,7 @@
       <!-- header section strats -->
       <header class="header_section">
         <div class="container-fluid">
-{% include 'newsoftMain/navbar.html' %}
+		{% include 'newsoftMain/navbar.html'%} 
         </div>
       </header>
       <!-- end header section -->
@@ -17,23 +17,22 @@
           <div
             id="carouselExampleControls"
             class="carousel slide"
-            data-ride="carousel"
-          >
+            data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="slider_item-box">
                   <div class="slider_item-container">
                     <div class="slider_item-detail">
                       <h1>
-                        PROVIDES TO MAKE BETTER SOFTWARE
+                        CREACIÓN DE SITIOS WEB.
                       </h1>
                       <p>
-                        Marketers/advertisers usually focus their efforts on the
-                        people responsible for making the purchase.
+			Creación de sitios web, estáticos o dinámicos. Acompañamiento en
+			todo momento.
                       </p>
                       <div>
-                        <a href="">
-                          Download
+			      <a href="{% url 'mostrar_contact' %}">
+                          CONTACTANOS
                         </a>
                       </div>
                     </div>
@@ -48,15 +47,15 @@
                   <div class="slider_item-container">
                     <div class="slider_item-detail">
                       <h1>
-                        PROVIDES TO MAKE BETTER SOFTWARE
+                        MONITOREO CONSTANTE DE TU SITIO WEB
                       </h1>
                       <p>
-                        Marketers/advertisers usually focus their efforts on the
-                        people responsible for making the purchase.
+		      Hacemos monitoreo constante del uso de tu sitio web,con tecnologías, 
+		      como "Google Analytics".
                       </p>
                       <div>
-                        <a href="">
-                          Download
+                        <a href="{% url 'mostrar_contact'%}">
+                          CONTACTANOS
                         </a>
                       </div>
                     </div>
@@ -71,15 +70,15 @@
                   <div class="slider_item-container">
                     <div class="slider_item-detail">
                       <h1>
-                        PROVIDES TO MAKE BETTER SOFTWARE
+                        ASISTENCIA PERSONALIZADA.
                       </h1>
                       <p>
-                        Marketers/advertisers usually focus their efforts on the
-                        people responsible for making the purchase.
+		      Contamos con asesoramiento personalizado para mantener tu sitio web, lo mas personalizado
+		      y actualizado según lo estimes conveniente.
                       </p>
                       <div>
-                        <a href="">
-                          Download
+			      <a href="{% url 'mostrar_contact'%}">
+                          CONTACTANOS
                         </a>
                       </div>
                     </div>
@@ -117,7 +116,7 @@
     <section class="about_section layout_padding">
       <div class="container">
         <h2 class="text-uppercase">
-          How it works
+          ¿Que tipo de paginas web realizamos?
         </h2>
       </div>
 
@@ -132,14 +131,13 @@
               </div>
               <div class="card_detail-ox">
                 <h4>
-                  FULLY RESPONSIVE
+                  COMPLETAMENTE RESPONSIVO
                 </h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo
-                </p>
+                Diseñado para adaptarse perfectamente a cualquier tamaño de pantalla, desde dispositivos 
+		móviles hasta monitores de escritorio. Garantiza una presentación visual coherente 
+		y atractiva, sin importar el dispositivo utilizado por los usuarios.    
+		</p>
               </div>
             </div>
           </div>
@@ -152,13 +150,14 @@
               </div>
               <div class="card_detail-ox">
                 <h4>
-                  WELL DOCUMENTED
+                 COMPLETAMENTE DOCUMENTADO 
                 </h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo
+		Proporcionando una guía detallada que cubre todos los aspectos de su uso, 
+		configuración y personalización.
+		La documentación exhaustiva asegura que los usuarios puedan comprender y aprovechar 
+		al máximo todas las funcionalidades ofrecidas, facilitando tanto la implementación 
+		como el mantenimiento.
                 </p>
               </div>
             </div>
@@ -172,13 +171,14 @@
               </div>
               <div class="card_detail-ox">
                 <h4>
-                  EASY TO USE
+		FÁCIL E INTUITIVO DE UTILIZAR
                 </h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo
+		Los sitios web construidos son faciles e intuitivos de utilizar, permitiendo a los usuarios
+		interactuar y navegar sin esfuerzo. Su interfaz amigable asegura que tanto principiantes 
+		como usuarios experimentados puedan aprovechar al máximo sus funcionalidades 
+		desde el primer momento."
+
                 </p>
               </div>
             </div>
@@ -190,34 +190,8 @@
     <!-- end about section -->
 
     <!-- who section -->
-    <section class="who_section">
-      <div class="container who_container">
-        <div class="who_img-box">
-		<img src="{% static 'newsoftMain/images/pc.jpg'%}" alt="" />
-        </div>
-        <div class="who_deail-box">
-          <h2>
-            Who is Newsoft
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodonisi ut aliquip ex ea commodo
-          </p>
-          <div>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end who section -->
+    {% include 'newsoftMain/about_content.html'%}
+        <!-- end who section -->
 
     <!-- feature section  -->
     <section class="feature_section layout_padding">
@@ -311,291 +285,11 @@
     <!-- end feature section -->
 
     <!-- contact section -->
-    <section class="contact_section ">
-      <div class="container d-flex justify-content-center">
-        <h2 class="text-uppercase">
-          Get in touch
-        </h2>
-      </div>
-      <div class="container-fluid layout_padding-top">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="col-md-10 offset-md-2">
-              <div class="contact_img-box">
-		      <img src="{% static 'newsoftMain/images/form-img.jpg'%}" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 form_bg px-0">
-            <div class="col-md-10 px-0">
-              <form action="">
-                <div class="contact_form-container">
-                  <div>
-                    <div>
-                      <input type="text" placeholder=" Name" />
-                    </div>
-                    <div>
-                      <input type="email" placeholder="  Email" />
-                    </div>
-
-                    <div>
-                      <input type="text" placeholder=" Phone Number" />
-                    </div>
-
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Message"
-                        class="message_input"
-                      />
-                    </div>
-                    <div class="mt-3 d-flex justify-content-end">
-                      <button type="submit">
-                        Send
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    {% include 'newsoftMain/contact_content.html'%} 
     <!-- end contact section -->
 
     <!-- info section -->
-    <section class="info_section layout_padding">
-      <div class="container info_content">
-        <div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="d-flex">
-                <h5>
-                  New software
-                </h5>
-              </div>
-              <div class="d-flex ">
-                <ul>
-                  <li>
-                    <a href="">
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      About services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      About Departments
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Contact Us
-                    </a>
-                  </li>
-                </ul>
-                <ul class="ml-3 ml-md-5">
-                  <li>
-                    <a href="">
-                      Loram ipusm
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Loram ipusm
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Loram ipusm
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Loram ipusm
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Loram ipusm
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="d-flex">
-                <h5>
-                  The Services
-                </h5>
-              </div>
-              <div class="d-flex ">
-                <ul>
-                  <li>
-                    <a href="">
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      About services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      About Departments
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Contact Us
-                    </a>
-                  </li>
-                </ul>
-                <ul class="ml-3 ml-md-5">
-                  <li>
-                    <a href="">
-                      Lorem ipsum dolor
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      sit amet, consectetur
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      adipiscing elit,
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      sed do eiusmod
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      tempor incididunt
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="d-flex">
-                <h5>
-                  Contact Us
-                </h5>
-              </div>
-              <div class="d-flex ">
-                <ul>
-                  <li>
-                    <a href="">
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      About services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      About Departments
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Contact Us
-                    </a>
-                  </li>
-                </ul>
-                <ul class="ml-3 ml-md-5">
-                  <li>
-                    <a href="">
-                      Lorem ipsum
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      dolor sit amet,
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      consectetur
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      adipiscing
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      elit, sed do eiusmod
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline"
-        >
-          <div class="social-box">
-            <a href="">
-		    <img src="{% static 'newsoftMain/images/fb.png'%}" alt="" />
-            </a>
-
-            <a href="">
-		    <img src="{% static 'newsoftMain/images/twitter.png'%}" alt="" />
-            </a>
-            <a href="">
-		    <img src="{% static 'newsoftMain/images/linkedin1.png'%}" alt="" />
-            </a>
-            <a href="">
-		    <img src="{% static 'newsoftMain/images/instagram1.png'%}" alt="" />
-            </a>
-          </div>
-          <div class="form_container mt-5">
-            <form action="">
-              <label for="subscribeMail">
-                Newsletter
-              </label>
-              <input
-                type="email"
-                placeholder="Enter Your email"
-                id="subscribeMail"
-              />
-              <button type="submit">
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+    {% include 'newsoftMain/info_section.html'%} 
 
     <!-- end info section -->
 {% include 'newsoftMain/footer.html' %}
