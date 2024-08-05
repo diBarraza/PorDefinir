@@ -1,11 +1,12 @@
   <section class="info_section layout_padding">
+	  {%load static%}
     <div class="container info_content">
       <div>
         <div class="row">
           <div class="col-md-4">
             <div class="d-flex">
               <h5>
-                New software
+               Nuevos Software 
               </h5>
             </div>
             <div class="d-flex ">
@@ -68,7 +69,7 @@
           <div class="col-md-4">
             <div class="d-flex">
               <h5>
-                The Services
+                Servicios Prestados
               </h5>
             </div>
             <div class="d-flex ">
@@ -131,7 +132,7 @@
           <div class="col-md-4">
             <div class="d-flex">
               <h5>
-                Contact Us
+                Contactanos
               </h5>
             </div>
             <div class="d-flex ">
@@ -196,27 +197,27 @@
       <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
         <div class="social-box">
           <a href="">
-            <img src="images/fb.png" alt="" />
+		  <img src="{% static 'newsoftMain/images/fb.png'%}" alt="" />
           </a>
 
           <a href="">
-            <img src="images/twitter.png" alt="" />
+            <img src="{% static 'newsoftMain/images/twitter.png'%}" alt="" />
           </a>
           <a href="">
-            <img src="images/linkedin1.png" alt="" />
+            <img src="{% static 'newsoftMain/images/linkedin1.png'%}" alt="" />
           </a>
           <a href="">
-            <img src="images/instagram1.png" alt="" />
+            <img src="{% static 'newsoftMain/images/instagram1.png'%}" alt="" />
           </a>
         </div>
         <div class="form_container mt-5">
           <form action="">
             <label for="subscribeMail">
-              Newsletter
+              Últimas noticias
             </label>
-            <input type="email" placeholder="Enter Your email" id="subscribeMail" />
+            <input type="email" placeholder="Ingresa tu email" id="subscribeMail" />
             <button type="submit">
-              Subscribe
+              Subscribirse
             </button>
           </form>
         </div>
