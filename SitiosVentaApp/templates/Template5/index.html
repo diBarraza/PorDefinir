@@ -7,20 +7,22 @@
 -->
 <html class="home blog no-js" lang="en-US">
 <head>
-    <title>Itsy | A cutesy little template by FreeHTML5.co</title>
+    {% load static%}
+    <title>TEMPLATE 5</title>
 
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-          type="text/css" media="all"/>
+    type="text/css" media="all"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC%3A400%2C700%7CLato%3A400%2C700%2C400italic%2C700italic&amp;ver=4.9.8"
-          type="text/css" media="screen"/>
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
-    <link rel="stylesheet" href="print.css" type="text/css" media="print"/>
+    type="text/css" media="screen"/>
+    <link rel="stylesheet" href="{% static 'Template5/style.css'%}" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="{% static 'Template5/print.css'%}" type="text/css" media="print"/>
     <!--[if (lt IE 9) & (!IEMobile)]>
     <link rel="stylesheet" id="lt-ie9-css" href="ie.css" type="text/css" media="screen"/>
     <![endif]-->
-    <script src='js/jquery-3.0.0.min.js'></script>
-    <script src='js/jquery-migrate-3.0.1.min.js'></script>
+    <script src="{% static 'js/jquery-3.0.0.min.js'%}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.1.min.js'%}"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'newsoftMain/images/f4.png' %}">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -33,7 +35,7 @@
 
         <div class="logo plain logo-left">
             <div class="site-title">
-                <a href="index.html" title="Go to Home">Itsy</a>
+                <a href="{% url 'mostrar_portafolio'%}" title="Go to Home">Itsy</a>
             </div>
         </div><!-- /logo -->
 
@@ -98,7 +100,7 @@
 </header>
 
 
-<div class="hero" style="background-image: url('images/lead.jpg'); text-align:right;">
+<div class="hero" style="background-image: url('../../static/Template5/images/lead.jpg'); text-align:right;">
     <div class="hero-inner">
         <div class="inner">
             <h1><span class="border border-top border-bottom">itsy</span></h1>
@@ -119,12 +121,12 @@
 
         <aside class="home-sticky-post post has-post-thumbnail sticky">
 
-  		    <span class="post-image">
-  				<a href="#">
-  				<img width="502" height="502" src="images/Lollipop-502x502.jpg"
-                     class="attachment-sticky size-sticky" alt=""/>
-  				</a>
-  		    </span>
+            <span class="post-image">
+                <a href="#">
+                <img width="502" height="502" src="{% static 'Template5/images/Lollipop-502x502.jpg' %}"
+                        class="attachment-sticky size-sticky" alt=""/>
+                </a>
+            </span>
 
             <div class="inner">
                 <h3 class="entry-title">
@@ -145,11 +147,11 @@
         <aside class="home-sticky-post post has-post-thumbnail sticky ">
 
             <span class="post-image">
-  				<a href="#">
-  				<img width="502" height="502" src="images/Apothecary.jpg"
-                     class="attachment-sticky size-sticky" alt=""/>
-  				</a>
-  		    </span>
+                <a href="#">
+                <img width="502" height="502" src="{% static 'Template5/images/Apothecary.jpg'%}"
+                        class="attachment-sticky size-sticky" alt=""/>
+                </a>
+            </span>
 
             <div class="inner">
                 <h3 class="entry-title">
@@ -159,7 +161,7 @@
                 <ul class="meta top">
                     <li class="time">
                         <a href="#"
-                           title="The Apothecary">
+                            title="The Apothecary">
                             <time class="post-date updated" datetime="2015-01-31">January 31, 2015</time>
                         </a>
                     </li>
@@ -172,7 +174,7 @@
 
   		    <span class="post-image">
                 <a href="#">
-                    <img width="502" height="502" src="images/Flowers.jpg"
+                    <img width="502" height="502" src="{% static 'Template5/images/Flowers.jpg'%}"
                      class="attachment-sticky size-sticky" alt=""/>
   				</a>
   		    </span>
@@ -196,7 +198,7 @@
         <aside class="home-sticky-post post has-post-thumbnail sticky ">
 
   		    <span class="post-image">
-                <a href="#"><img width="502" height="502" src="images/Sun.jpg"
+                <a href="#"><img width="502" height="502" src="{% static 'Template5/images/Sun.jpg'%}"
                      class="attachment-sticky size-sticky" alt=""/>
   				</a>
             </span>
@@ -223,7 +225,7 @@
 
   		    <span class="post-image">
                 <a href="#">
-                    <img width="502" height="502" src="images/Meeting.jpg"
+                    <img width="502" height="502" src="{% static 'Template5/images/Meeting.jpg'%}"
                      class="attachment-sticky size-sticky" alt=""/>
   				</a>
             </span>
@@ -248,10 +250,10 @@
 
             <span class="post-image">
                 <a href="#">
-                    <img width="502" height="502" src="images/Bridge.jpg"
-                     class="attachment-sticky size-sticky" alt=""/>
-  				</a>
-  		    </span>
+                    <img width="502" height="502" src="{% static 'Template5/images/Bridge.jpg'%}"
+                    class="attachment-sticky size-sticky" alt=""/>
+                </a>
+            </span>
 
 
             <div class="inner">
@@ -278,40 +280,37 @@
     <div class="main-wrap">
         <section class="main main-archive">
             <div class="loop">
-
-
                 <article class="post format-gallery post_format-post-format-gallery">
-
-
-                    <a href="#"
-                       title="Running through Chicago">
+                    <a href="#" title="Running through Chicago">
                         <div class="part-gallery">
                             <div class="flexslider">
                                 <ul class="slides">
-
-                                    <li><span class="post-image"><img src="images/Run-3.jpg"
-                                                                      alt="Run-3"/></span></li>
-                                    <li><span class="post-image"><img src="images/Run-1.jpg"
-                                                                      alt="Run-1"/></span></li>
-                                    <li><span class="post-image"><img src="images/Run-2.jpg"
-                                                                      alt="Run-2"/></span></li>
+                                    <li>
+                                        <span class="post-image">
+                                        <img src="{% static 'Template5/images/Run-3.jpg'%}" alt="Run-3"/>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="post-image">
+                                            <img src="{% static 'Template5/images/Run-1.jpg'%}" alt="Run-1"/>
+                                        </span></li>
+                                    <li>
+                                        <span class="post-image">
+                                            <img src="{% static 'Template5/images/Run-2.jpg'%}"alt="Run-2"/>
+                                        </span>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-
                     </a>
-
                     <div class="inner">
-
                         <h2 class="entry-title">
-                            <a href="#"
-                               title="Running through Chicago">
+                            <a href="#" title="Running through Chicago">
                                 Running through Chicago </a>
                         </h2>
                         <ul class="meta top">
                             <li class="time">
-                                <a href="#"
-                                   title="Running through Chicago">
+                                <a href="#" title="Running through Chicago">
                                     <time class="post-date updated" datetime="2015-02-01">February 1, 2015</time>
                                 </a></li>
 
