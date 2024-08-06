@@ -19,11 +19,12 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 urlpatterns = [
-    path('index/',views.mostrar_index,name='mostrar_index'),
-    path('about/', views.mostrar_about, name='mostrar_about'),
-    path('contact/', views.mostrar_contact,name = 'mostrar_contact'),
-    path('feature/', views.mostrar_feature ,name = 'mostrar_feature'),
+    path('indice/',views.mostrar_index,name='mostrar_index'),
+    path('sobre_nosotros/', views.mostrar_about, name='mostrar_about'),
+    path('contacto/', views.mostrar_contact,name = 'mostrar_contact'),
+    path('caracteristicas/', views.mostrar_feature ,name = 'mostrar_feature'),
     path('', views.mostrar_index ,name = 'mostrar_index'),
+    path('portafolio', views.mostrar_portafolio, name = 'mostrar_portafolio'),
     path('template1/', views.mostrar_template1 ,name = 'mostrar_template1'),
     path('template2/', views.mostrar_template2 ,name = 'mostrar_template2'),
     path('template3/', views.mostrar_template3 ,name = 'mostrar_template3'),

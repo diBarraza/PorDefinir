@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	{% load static%}
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,14 +20,14 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'Template3/'%}css/bootstrap.css" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="{% static 'Template3/css/style.css'%}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="{% static 'Template3/css/responsive.css'%}" rel="stylesheet" />
 </head>
 
 <body>
@@ -35,8 +36,8 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="">
+          <a class="navbar-brand" href="{%url 'mostrar_portafolio'%}">
+		  <img src="{% static 'template3/images/logo.pngimages/logo.png' %}" alt="">
             <span>
               ELEMENTS
             </span>
@@ -50,7 +51,7 @@
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+			<a class="nav-link" href="{%url 'mostrar_template3'%}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about.html">About </a>
@@ -120,13 +121,13 @@
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="images/slider-img.jpg" alt="">
+		<img src="{% static 'Template3/images/slider-img.jpg'%}" alt="">
               </div>
               <div class="carousel-item">
-                <img src="images/slider-img.jpg" alt="">
+                <img src="{% static 'Template3/images/slider-img.jpg'%}" alt="">
               </div>
               <div class="carousel-item">
-                <img src="images/slider-img.jpg" alt="">
+                <img src="{% static 'Template3/images/slider-img.jpg'%}" alt="">
               </div>
             </div>
 
@@ -752,8 +753,8 @@
   </section>
   <!-- footer section -->
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="{% static 'Template3/js/jquery-3.4.1.min.js'%}"></script>
+  <script type="text/javascript" src="{% static 'Template3/js/bootstrap.js'%}"></script>
 
 </body>
 </body>

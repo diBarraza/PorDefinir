@@ -38,11 +38,12 @@
       href="https://fonts.googleapis.com/css?family=Poppins|Raleway:400,600|Righteous&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet"  href="{% static 'newsoftMain/css/bootstrap.css'%}" />
+
+    <link rel="stylesheet"  href="{% static 'newsoftMain/css/bootstrap.css'%}?v={{ STATIC_VERSION }}" />
     <!-- Custom styles for this template -->
-    <link  rel="stylesheet" href="{% static 'newsoftMain/css/style.css' %}" />
+    <link  rel="stylesheet" href="{% static 'newsoftMain/css/style.css' %}?v={{ STATIC_VERSION }}" />
     <!-- responsive style -->
-    <link  rel="stylesheet"  href="{% static 'newsoftMain/css/responsive.css' %}" />
+    <link  rel="stylesheet"  href="{% static 'newsoftMain/css/responsive.css' %}?v={{ STATIC_VERSION }}" />
 </head>
 
 
