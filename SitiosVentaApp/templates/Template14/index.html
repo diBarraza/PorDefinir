@@ -2,13 +2,16 @@
 <html lang="en">
 
   <head>
-
+{%load static%}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+   
+
+
 
     <title>Klassy Cafe - Restaurant HTML Template</title>
 <!--
@@ -18,16 +21,18 @@ TemplateMo 558 Klassy Cafe
 https://templatemo.com/tm-558-klassy-cafe
 
 -->
+
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'Template14/assets/css/bootstrap.min.css' %}">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'Template14/assets/css/font-awesome.css' %}">
 
-    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
+    <link rel="stylesheet" href="{% static 'Template14/assets/css/templatemo-klassy-cafe.css' %}">
 
-    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="{% static 'Template14/assets/css/owl-carousel.css' %}">
 
-    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="{% static 'Template14/assets/css/lightbox.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'newsoftMain/images/f4.png' %}">
 
     </head>
     
@@ -51,8 +56,8 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
+			<a href="{% url 'mostrar_portafolio'%}" class="logo">
+				<img src="{%static 'Template14/assets/images/klassy-logo.png'%}" align="klassy cafe html template">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -67,7 +72,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                     <li><a href="#">Drop Down Page 1</a></li>
                                     <li><a href="#">Drop Down Page 2</a></li>
                                     <li><a href="#">Drop Down Page 3</a></li>
-                                </ul>
+     y                           </ul>
                             </li>
                         -->
                             <li class="scroll-to-section"><a href="#menu">Menu</a></li>
@@ -116,21 +121,21 @@ https://templatemo.com/tm-558-klassy-cafe
                           <!-- Item -->
                           <div class="item">
                             <div class="img-fill">
-                                <img src="assets/images/slide-01.jpg" alt="">
+				    <img src="{% static 'Template14/assets/images/slide-01.jpg'%}" alt="">
                             </div>
                           </div>
                           <!-- // Item -->
                           <!-- Item -->
                           <div class="item">
                             <div class="img-fill">
-                                <img src="assets/images/slide-02.jpg" alt="">
+                                <img src="{% static 'Template14/assets/images/slide-02.jpg'%}" alt="">
                             </div>
                           </div>
                           <!-- // Item -->
                           <!-- Item -->
                           <div class="item">
                             <div class="img-fill">
-                                <img src="assets/images/slide-03.jpg" alt="">
+                                <img src="{% static 'Template14/assets/images/slide-03.jpg'%}" alt="">
                             </div>
                           </div>
                           <!-- // Item -->
@@ -746,26 +751,26 @@ https://templatemo.com/tm-558-klassy-cafe
     </footer>
 
     <!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src="{% static 'Template14/assets/js/jquery-2.1.0.min.js' %}"></script>
 
     <!-- Bootstrap -->
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{% static 'Template14/assets/js/popper.js' %}"></script>
+    <script src="{% static 'Template14/assets/js/bootstrap.min.js' %}"></script>
 
     <!-- Plugins -->
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/accordions.js"></script>
-    <script src="assets/js/datepicker.js"></script>
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    <script src="assets/js/slick.js"></script> 
-    <script src="assets/js/lightbox.js"></script> 
-    <script src="assets/js/isotope.js"></script> 
+    <script src="{% static 'Template14/assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'Template14/assets/js/accordions.js' %}"></script>
+    <script src="{% static 'Template14/assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'Template14/assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'Template14/assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'Template14/assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'Template14/assets/js/imgfix.min.js' %}"></script> 
+    <script src="{% static 'Template14/assets/js/slick.js' %}"></script> 
+    <script src="{% static 'Template14/assets/js/lightbox.js' %}"></script> 
+    <script src="{% static 'Template14/assets/js/isotope.js' %}"></script> 
     
     <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
+    <script src="{% static 'Template14/assets/js/custom.js'%}"></script>
     <script>
 
         $(function() {

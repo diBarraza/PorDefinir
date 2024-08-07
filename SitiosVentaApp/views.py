@@ -37,7 +37,7 @@ def mostrar_template6(request):
     return render(request, '../templates/Template6/index.html')
 
 def mostrar_template7(request):
-    return render(request, '../templates/Template7/public_html/index.html')
+    return render(request, '../templates/Template7/index.html')
 
 def mostrar_template8(request):
     return render(request, '../templates/Template8/index.html')
@@ -46,7 +46,7 @@ def mostrar_template9(request):
     return render(request, '../templates/Template9/index.html')
 
 def mostrar_template10(request):
-    return render(request, '../templates/Template10/mediumish-html/index.html')
+    return render(request, '../templates/Template10/index.html')
 
 def mostrar_template11(request):
     return render(request, '../templates/Template11/index.html')

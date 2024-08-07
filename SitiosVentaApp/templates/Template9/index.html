@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	{%load static%}
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,6 +12,8 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
+  <link rel="icon" type="image/x-icon" href="{% static 'newsoftMain/images/f4.png' %}">
+
 
   <title>Medion</title>
 
@@ -23,15 +26,15 @@
 
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'Template9/css/bootstrap.css'%}" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Roboto:400,700&display=swap" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="{% static 'Template9/css/style.css'%}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="{% static 'Template9/css/responsive.css'%}" rel="stylesheet" />
 </head>
 
 <body>
@@ -60,8 +63,8 @@
       </div>
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="">
+		<a class="navbar-brand" href="{% url 'mostrar_portafolio'%}">
+		  <img src="{%static 'Template9/images/logo.png'%}" alt="">
             <span>
               Medion
             </span>
@@ -1167,8 +1170,8 @@
   </section>
   <!-- footer section -->
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="{% static 'Template9/js/jquery-3.4.1.min.js'%}"></script>
+  <script type="text/javascript" src="{% static 'Template9/js/bootstrap.js'%}"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
   </script>
   <script type="text/javascript">

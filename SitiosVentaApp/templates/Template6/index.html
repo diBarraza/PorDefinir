@@ -14,22 +14,24 @@
 
   <title>JD</title>
 
-
+  {% load static%}
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'Template6/css/bootstrap.css' %}" />
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="{% static 'Template6/css/style.css' %}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="{% static 'Template6/css/responsive.css' %}" rel="stylesheet" />
+
+   <link rel="icon" type="image/x-icon" href="{% static 'newsoftMain/images/f4.png' %}">
 
 
 
 
-  <link rel="stylesheet" href="css/css-circular-prog-bar.css">
+  <link rel="stylesheet" href="{% static 'Template6/css/css-circular-prog-bar.css' %}">
 
 
 </head>
@@ -40,7 +42,7 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+		<a class="navbar-brand" href="{% url 'mostrar_portafolio'%}">
             JD
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -466,8 +468,9 @@
   </section>
   <!-- footer section -->
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="{% static 'Template6/js/jquery-3.4.1.min.js'%}"></script>
+  <script type="text/javascript" src="{% static 'Template6/js/bootstrap.js'%}"></script>
+
   <!-- progreesbar script -->
 
   </script>
