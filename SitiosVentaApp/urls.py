@@ -40,4 +40,5 @@ urlpatterns = [
     path('template13/', views.mostrar_template13 ,name = 'mostrar_template13'),
     path('template14/', views.mostrar_template14 ,name = 'mostrar_template14'),
     path('template15/', views.mostrar_template15 ,name = 'mostrar_template15'),
+    path('template16/', views.mostrar_template16 ,name = 'mostrar_template16')
 ]

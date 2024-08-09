@@ -63,6 +63,9 @@ def mostrar_template14(request):
 def mostrar_template15(request):
     return render(request, '../templates/Template15/index.html')
 
+def mostrar_template16(request):
+    return render(request, '../templates/Template16/index.html')
+
 
 
 

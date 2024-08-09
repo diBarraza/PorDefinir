@@ -3,12 +3,13 @@
 <head>
 <title>Car Club</title>
 <meta charset="utf-8">
-<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
-<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-<script type="text/javascript" src="js/jquery-1.4.2.min.js" ></script>
-<script src="js/rollover.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/script.js"></script>
+{% load static%}
+<link rel="stylesheet" href="{% static 'Template16/css/reset.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'Template16/css/layout.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'Template16/css/style.css' %}" type="text/css" media="all">
+<script type="text/javascript" src="{% static 'Template16/js/jquery-1.4.2.min.js' %}" ></script>
+<script src="{% static 'Template16/js/rollover.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'Template16/js/script.js' %}"></script>
 <!--[if lt IE 7]>
 <link rel="stylesheet" href="css/ie6.css" type="text/css" media="screen">
 <script type="text/javascript" src="js/ie_png.js"></script>
@@ -20,8 +21,8 @@
 <!-- START PAGE SOURCE -->
 <header>
   <div class="container">
-    <figure><img src="images/1page-header-img.jpg"></figure>
-    <h1><a href="#"></a></h1>
+	  <figure><img src="{% static 'Template16/images/1page-header-img.jpg'%}"></figure>
+	  <h1><a href="{%url 'mostrar_portafolio'%}"></a></h1>
     <ul class="top-menu">
       <li><a href="#">Help</a></li>
       <li class="last"><a href="#">FAQ</a></li>
