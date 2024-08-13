@@ -28,7 +28,28 @@ def mostrar_template3(request):
     return render(request, '../templates/Template3/index.html')
 
 def mostrar_template4(request):
-    return render(request, '../templates/Template4/index.html')
+    context = {
+        'active_page': 'home'
+    }
+    return render(request, '../templates/Template4/index.html', context)
+def mostrar_template4_about(request):
+    context = {
+        'active_page': 'about'
+    }
+    return render(request, '../templates/Template4/about.html', context)
+def mostrar_template4_services(request):
+    context = {
+        'active_page': 'services'
+    }
+    return render(request, '../templates/Template4/service.html', context)
+def mostrar_template4_contact(request):
+    context = {
+        'active_page': 'contact'
+    }
+    return render(request, '../templates/Template4/contact.html', context)
+
+
+
 
 def mostrar_template5(request):
     return render(request, '../templates/Template5/index.html')

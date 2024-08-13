@@ -1,0 +1,38 @@
+{%load static%}	
+<nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="{% url 'mostrar_portafolio' %}">
+            <span>
+              Heustonn
+            </span>
+          </a>
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item {% if active_page == 'home' %}active{% endif %}">
+		 <a class="nav-link" href="{% url 'mostrar_template4'%}">Home{% if active_page == 'home' %} <span class="sr-only">(current)</span>{% endif %}</a>
+		</li>
+                <li class="nav-item {% if active_page == 'about' %}active{% endif %}">
+                  <a class="nav-link" href="{% url 'mostrar_template4_about'%}"> About {% if active_page == 'about' %} <span class="sr-only">(current)</span>{% endif %}</a>
+                </li>
+                <li class="nav-item {% if active_page == 'services' %}active{% endif %}">
+                  <a class="nav-link" href="{% url 'mostrar_template4_services'%}"> Services {% if active_page == 'services' %} <span class="sr-only">(current)</span>{% endif %}</a>
+                </li>
+                <li class="nav-item {% if active_page == 'contact' %}active{% endif %}">
+                  <a class="nav-link" href="{% url 'mostrar_template4_contact'%}">Contact us{% if active_page == 'contact' %} <span class="sr-only">(current)</span>{% endif %}</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+            <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+          </form>
+        </nav>

@@ -29,6 +29,12 @@ urlpatterns = [
     path('template2/', views.mostrar_template2 ,name = 'mostrar_template2'),
     path('template3/', views.mostrar_template3 ,name = 'mostrar_template3'),
     path('template4/', views.mostrar_template4 ,name = 'mostrar_template4'),
+    path('template4/sobre_nosotros', views.mostrar_template4_about ,name = 'mostrar_template4_about'),
+    path('template4/servicios', views.mostrar_template4_services ,name = 'mostrar_template4_services'),
+    path('template4/contactanos', views.mostrar_template4_contact ,name = 'mostrar_template4_contact'),
+    
+
+
     path('template5/', views.mostrar_template5 ,name = 'mostrar_template5'),
     path('template6/', views.mostrar_template6 ,name = 'mostrar_template6'),
     path('template7/', views.mostrar_template7 ,name = 'mostrar_template7'),
