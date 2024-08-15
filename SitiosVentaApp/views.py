@@ -27,6 +27,18 @@ def mostrar_template2(request):
 def mostrar_template3(request):
     return render(request, '../templates/Template3/index.html')
 
+def mostrar_carserv_index(request):
+    return render (request, '../templates/carserv/index.html')
+def mostrar_carserv_about(request):
+    return render (request, '../templates/carserv/about.html')
+def mostrar_carserv_contact(request):
+    return render (request, '../templates/carserv/contact.html')
+def mostrar_carserv_service(request):
+    return render (request, '../templates/carserv/service.html')
+
+
+
+
 def mostrar_template4(request):
     context = {
         'active_page': 'home'

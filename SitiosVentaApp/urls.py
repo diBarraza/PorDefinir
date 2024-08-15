@@ -33,7 +33,11 @@ urlpatterns = [
     path('template4/servicios', views.mostrar_template4_services ,name = 'mostrar_template4_services'),
     path('template4/contactanos', views.mostrar_template4_contact ,name = 'mostrar_template4_contact'),
     
-
+    path('carserv', views.mostrar_carserv_index ,name = 'mostrar_carserv'),
+    path('carserv/sobre_nosotros', views.mostrar_carserv_about ,name = 'mostrar_carserv_about'),
+    path('carserv/contactanos', views.mostrar_carserv_contact ,name = 'mostrar_carserv_contact'),
+    path('carserv/servicios', views.mostrar_carserv_service ,name = 'mostrar_carserv_service'),
+ 
 
     path('template5/', views.mostrar_template5 ,name = 'mostrar_template5'),
     path('template6/', views.mostrar_template6 ,name = 'mostrar_template6'),
