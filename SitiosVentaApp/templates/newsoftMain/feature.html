@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+{% include 'newsoftMain/header.html' %}
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+ 	{% include 'newsoftMain/navbar.html' %}
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+  <!-- feature section  -->
+  {%include 'newsoftMain/feature_content.html'%} 
+
+  <!-- end feature section -->
+
+  <!-- info section -->
+  {%include 'newsoftMain/info_section.html'%}
+   <!-- end info section -->
+
+  <!-- footer section -->
+ {% include 'newsoftMain/footer.html' %}
+</body>
+
+</html>

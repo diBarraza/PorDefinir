@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  {% include 'newsoftMain/header.html' %}
+</head>
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+  {% include 'newsoftMain/navbar.html'%} 
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="container">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="slider_item-box">
+                <div class="slider_item-container">
+                  <div class="slider_item-detail">
+                    <h1>
+                      CREACIÓN DE SITIOS WEB.
+                    </h1>
+                    <p>
+    Creación de sitios web, estáticos o dinámicos. Acompañamiento en
+    todo momento.
+                    </p>
+                    <div>
+                      <a href="{% url 'mostrar_contact' %}">
+                        CONTACTANOS
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slider_item-imgbox">
+                    <img src="{% static 'newsoftMain/images/pc-banner.png'%}" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slider_item-box">
+                <div class="slider_item-container">
+                  <div class="slider_item-detail">
+                    <h1>
+                      MONITOREO CONSTANTE DE TU SITIO WEB
+                    </h1>
+                    <p>
+        Hacemos monitoreo constante del uso de tu sitio web,con tecnologías, 
+        como "Google Analytics".
+                    </p>
+                    <div>
+                      <a href="{% url 'mostrar_contact'%}">
+                        CONTACTANOS
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slider_item-imgbox">
+        <img src="{% static 'newsoftMain/images/pc-banner.png'%}" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slider_item-box">
+                <div class="slider_item-container">
+                  <div class="slider_item-detail">
+                    <h1>
+                      ASISTENCIA PERSONALIZADA.
+                    </h1>
+                    <p>
+        Contamos con asesoramiento personalizado para mantener tu sitio web, lo mas personalizado
+        y actualizado según lo estimes conveniente.
+                    </p>
+                    <div>
+          <a href="{% url 'mostrar_contact'%}">
+                        CONTACTANOS
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slider_item-imgbox">
+        <img src="{% static 'newsoftMain/images/pc-banner.png'%}" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="next"
+      >
+        <span class="sr-only">Next</span>
+      </a>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+    <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <h2 class="text-uppercase">
+        ¿Que tipo de paginas web realizamos?
+      </h2>
+    </div>
+
+    <div class="container">
+      <div class="about_card-container layout_padding2-top">
+        <div class="about_card">
+          <div class="about-detail">
+            <div class="about_img-container">
+              <div class="about_img-box">
+    <img src="{% static 'newsoftMain/images/work1.png'%}" alt="" />
+              </div>
+            </div>
+            <div class="card_detail-ox">
+              <h4>
+                COMPLETAMENTE RESPONSIVO
+              </h4>
+              <p>
+              Diseñado para adaptarse perfectamente a cualquier tamaño de pantalla, desde dispositivos 
+  móviles hasta monitores de escritorio. Garantiza una presentación visual coherente 
+  y atractiva, sin importar el dispositivo utilizado por los usuarios.    
+  </p>
+            </div>
+          </div>
+        </div>
+        <div class="about_card">
+          <div class="about-detail">
+            <div class="about_img-container">
+              <div class="about_img-box">
+    <img src="{% static 'newsoftMain/images/work2.png'%}" alt="" />
+              </div>
+            </div>
+            <div class="card_detail-ox">
+              <h4>
+                COMPLETAMENTE DOCUMENTADO 
+              </h4>
+              <p>
+  Proporcionando una guía detallada que cubre todos los aspectos de su uso, 
+  configuración y personalización.
+  La documentación exhaustiva asegura que los usuarios puedan comprender y aprovechar 
+  al máximo todas las funcionalidades ofrecidas, facilitando tanto la implementación 
+  como el mantenimiento.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about_card">
+          <div class="about-detail">
+            <div class="about_img-container">
+              <div class="about_img-box">
+    <img src="{% static 'newsoftMain/images/work3.png'%}" alt="" />
+              </div>
+            </div>
+            <div class="card_detail-ox">
+              <h4>
+  FÁCIL E INTUITIVO DE UTILIZAR
+              </h4>
+              <p>
+  Los sitios web construidos son faciles e intuitivos de utilizar, permitiendo a los usuarios
+  interactuar y navegar sin esfuerzo. Su interfaz amigable asegura que tanto principiantes 
+  como usuarios experimentados puedan aprovechar al máximo sus funcionalidades 
+  desde el primer momento."
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- who section -->
+  {% include 'newsoftMain/about_content.html'%}
+  <!-- end who section -->
+
+  <!-- feature section  -->
+  {% include 'newsoftMain/feature_content.html'%}
+  <!-- end feature section -->
+
+  <!-- contact section -->
+  {% include 'newsoftMain/contact_content.html'%} 
+  <!-- end contact section -->
+
+  <!-- info section -->
+  {% include 'newsoftMain/info_section.html'%} 
+
+  <!-- end info section -->
+  {% include 'newsoftMain/footer.html' %}
+
+  </body>
+
+</html>
