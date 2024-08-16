@@ -19,6 +19,8 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 urlpatterns = [
+         
+    path('administrador/',views.mostrar_admin,name='mostrar_admin'),
     path('indice/',views.mostrar_index,name='mostrar_index'),
     path('sobre_nosotros/', views.mostrar_about, name='mostrar_about'),
     path('contacto/', views.mostrar_contact,name = 'mostrar_contact'),
