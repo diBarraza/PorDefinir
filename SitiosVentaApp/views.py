@@ -7,6 +7,9 @@ version = {'STATIC_VERSION':STATIC_VERSION}
 def mostrar_admin(request):
     return render (request,'../templates/admin/index.html')
 
+def mostrar_login(request):
+    return render(request,'../templates/admin/login.html')
+
 def mostrar_index(request):
     return render(request, '../templates/newsoftMain/index.html',version)
 
