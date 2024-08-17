@@ -20,8 +20,8 @@ from django.urls import path
 from . import views
 urlpatterns = [
          
-    path('administrador/',views.mostrar_admin,name='mostrar_admin'),
-    path('login/',views.mostrar_login,name='mostrar_login'),
+    path('dashboard/',views.mostrar_admin,name='mostrar_admin'),
+    path('ingresar/',views.mostrar_login,name='mostrar_login'),
 
 
     path('indice/',views.mostrar_index,name='mostrar_index'),

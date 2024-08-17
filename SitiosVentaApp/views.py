@@ -5,10 +5,10 @@ version = {'STATIC_VERSION':STATIC_VERSION}
 # Create your views here.
 
 def mostrar_admin(request):
-    return render (request,'../templates/admin/index.html')
+    return render (request,'../templates/dashboard/index.html')
 
 def mostrar_login(request):
-    return render(request,'../templates/admin/login.html')
+    return render(request,'../templates/dashboard/ingresar.html')
 
 def mostrar_index(request):
     return render(request, '../templates/newsoftMain/index.html',version)
