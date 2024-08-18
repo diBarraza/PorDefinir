@@ -8,6 +8,7 @@ def mostrar_admin(request):
     return render (request,'../templates/dashboard/index.html')
 
 def mostrar_login(request):
+    
     return render(request,'../templates/dashboard/ingresar.html')
 def mostrar_registrar(request):
     return render(request,'../templates/dashboard/register.html')
