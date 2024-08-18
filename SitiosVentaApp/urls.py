@@ -22,6 +22,12 @@ urlpatterns = [
          
     path('dashboard/',views.mostrar_admin,name='mostrar_admin'),
     path('ingresar/',views.mostrar_login,name='mostrar_login'),
+    path('registrar/',views.mostrar_registrar,name='mostrar_registrar'),
+    path('olvidopsw/',views.mostrar_olvidopws,name='mostrar_olvidopws'),
+    path('registrar_post/',views.post_registrar,name='registrar_post'),
+
+
+
 
 
     path('indice/',views.mostrar_index,name='mostrar_index'),

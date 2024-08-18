@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import time 
 STATIC_VERSION = str(int(time.time()))
 version = {'STATIC_VERSION':STATIC_VERSION}
@@ -9,6 +9,26 @@ def mostrar_admin(request):
 
 def mostrar_login(request):
     return render(request,'../templates/dashboard/ingresar.html')
+def mostrar_registrar(request):
+    return render(request,'../templates/dashboard/register.html')
+def mostrar_olvidopws(request):
+    return render(request,'../templates/dashboard/forgot-password.html')
+
+def post_registrar(request):
+   if request.method == 'POST':
+        nombres =request.POST.get('nombres')
+        apellidos = request.POST.get('apellidos')
+        correo =  request.POST.get('correo')
+        # Puedes capturar múltiples valores
+        password = request.POST.get('password')
+
+        # Procesa los datos como necesites
+        print(nombres,apellidos,correo,password)
+        return redirect('mostrar_admin')
+
+        # Retorna una respuesta, redirige o renderiza otra página
+        #return render(request, 'success.html', {'input_value': input_value})
+   return redirect('mostrar_login') 
 
 def mostrar_index(request):
     return render(request, '../templates/newsoftMain/index.html',version)
