@@ -3,7 +3,6 @@
 
 {%include 'dashboard/header.html'%}
 {%load static%}
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <body class="bg-gradient-primary">
 
@@ -46,7 +45,6 @@
                                                 <label class="custom-control-label text-white" for="customCheck">Recordarme!</label>
                                             </div>
                                         </div>
-					<div class="g-recaptcha" data-sitekey="6LfO2CcqAAAAADDGl8g1lVHx56q1a0nkxIFejfGS"></div>
 					<a href="{%url 'mostrar_admin'%}" class="btn btn-primary btn-user btn-block">
                                            ¡Ingresar! 
                                         </a>
@@ -82,3 +80,9 @@
 </body>
 
 </html>
+<!-- Replace the variables below. -->
+<script>
+  function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+  }
+</script>
