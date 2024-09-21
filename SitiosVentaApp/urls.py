@@ -25,11 +25,6 @@ urlpatterns = [
     path('registrar/',views.mostrar_registrar,name='mostrar_registrar'),
     path('olvidopsw/',views.mostrar_olvidopws,name='mostrar_olvidopws'),
     path('registrar_post/',views.post_registrar,name='registrar_post'),
-
-
-
-
-
     path('indice/',views.mostrar_index,name='mostrar_index'),
     path('sobre_nosotros/', views.mostrar_about, name='mostrar_about'),
     path('contacto/', views.mostrar_contact,name = 'mostrar_contact'),

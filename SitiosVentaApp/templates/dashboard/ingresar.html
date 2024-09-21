@@ -29,25 +29,26 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-white mb-4">Bienvenido.</h1>
                                     </div>
-                                    <form class="user">
+                                    <form method="POST" class="user">
+					{% csrf_token %}
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                            <input type="text" name="user_name" class="form-control form-control-user"
+                                                id="InputEmail" aria-describedby="emailHelp"
                                                 placeholder="Ingresar dirección email...">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Contraseña">
+                                            <input type="password" name="password" class="form-control form-control-user"
+                                                id="password_id" placeholder="Contraseña">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <input type="checkbox" name="remember_me" class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label text-white" for="customCheck">Recordarme!</label>
                                             </div>
                                         </div>
-					<a href="{%url 'mostrar_admin'%}" class="btn btn-primary btn-user btn-block">
+					<button type="submit" class="btn btn-primary btn-user btn-block">
                                            ¡Ingresar! 
-                                        </a>
+                                        </button>
                                         <hr>
                                         <a href="" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Registrar con Google

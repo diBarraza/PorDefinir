@@ -1,14 +1,39 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
 import time 
 STATIC_VERSION = str(int(time.time()))
 version = {'STATIC_VERSION':STATIC_VERSION}
 # Create your views here.
 
+def user_login(request):
+        return render(request, 'dashboard/ingresar.html')
+
 def mostrar_admin(request):
     return render (request,'../templates/dashboard/index.html')
 
 def mostrar_login(request):
-    
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        print("Hola login")
+        remember_me = request.POST.get('remember_me', None)  # Capturar la opción de "recordarme"
+        
+        user = authenticate(request, username=username, password=password)
+        
+        if user is not None:
+            login(request, user)
+            
+            # Si "recordarme" no está marcado, caduca la sesión al cerrar el navegador
+            if remember_me:
+                request.session.set_expiry(1209600)  # 2 semanas
+            else:
+                request.session.set_expiry(0)  # La sesión expira al cerrar el navegador
+            
+            return redirect('mostrar_admin')
+        else:
+            messages.error(request, 'Usuario o contraseña incorrectos.')
+            return redirect('mostrar_login')
     return render(request,'../templates/dashboard/ingresar.html')
 def mostrar_registrar(request):
     return render(request,'../templates/dashboard/register.html')
