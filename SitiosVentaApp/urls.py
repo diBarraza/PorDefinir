@@ -18,18 +18,27 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from django.shortcuts import redirect
+
+def redirigir_si_yeanpasten(request):
+    if 'yeanpasten.cl' in request.get_host():
+        # Redirigir a la vista de template7 si el dominio es yeanpasten.cl
+        return redirect('template7')
+    # Si no es yeanpasten.cl, puedes redirigir a otra página o mostrar un template
+    return redirect('indice/')  # Redirige a otra página (home, por ejemplo)
+
 urlpatterns = [
-         
+
     path('dashboard/',views.mostrar_admin,name='mostrar_admin'),
     path('ingresar/',views.mostrar_login,name='mostrar_login'),
     path('registrar/',views.mostrar_registrar,name='mostrar_registrar'),
     path('olvidopsw/',views.mostrar_olvidopws,name='mostrar_olvidopws'),
     path('registrar_post/',views.post_registrar,name='registrar_post'),
-    path('indice/',views.mostrar_index,name='mostrar_index'),
+    path('indice/',views.mostrar_index),
     path('sobre_nosotros/', views.mostrar_about, name='mostrar_about'),
     path('contacto/', views.mostrar_contact,name = 'mostrar_contact'),
     path('caracteristicas/', views.mostrar_feature ,name = 'mostrar_feature'),
-    path('', views.mostrar_index ,name = 'mostrar_index'),
+    path('', redirigir_si_yeanpasten ,name = 'mostrar_index'),
     path('portafolio', views.mostrar_portafolio, name = 'mostrar_portafolio'),
     path('template1/', views.mostrar_template1 ,name = 'mostrar_template1'),
     path('template2/', views.mostrar_template2 ,name = 'mostrar_template2'),
@@ -43,7 +52,7 @@ urlpatterns = [
 #    path('carserv/sobre_nosotros', views.mostrar_carserv_about ,name = 'mostrar_carserv_about'),
 #    path('carserv/contactanos', views.mostrar_carserv_contact ,name = 'mostrar_carserv_contact'),
 #    path('carserv/servicios', views.mostrar_carserv_service ,name = 'mostrar_carserv_service'),
- 
+
 
     path('template5/', views.mostrar_template5 ,name = 'mostrar_template5'),
     path('template6/', views.mostrar_template6 ,name = 'mostrar_template6'),

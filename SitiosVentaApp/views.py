@@ -13,7 +13,9 @@ def mostrar_admin(request):
     return render (request,'../templates/dashboard/index.html')
 
 def mostrar_login(request):
+    
     if request.method == 'POST':
+        return redirect('mostrar_admin')
         username = request.POST['username']
         password = request.POST['password']
         print("Hola login")
@@ -30,7 +32,6 @@ def mostrar_login(request):
             else:
                 request.session.set_expiry(0)  # La sesión expira al cerrar el navegador
             
-            return redirect('mostrar_admin')
         else:
             messages.error(request, 'Usuario o contraseña incorrectos.')
             return redirect('mostrar_login')
@@ -41,7 +42,7 @@ def mostrar_olvidopws(request):
     return render(request,'../templates/dashboard/forgot-password.html')
 
 def post_registrar(request):
-   if request.method == 'POST':
+    if request.method == 'POST':
         nombres =request.POST.get('nombres')
         apellidos = request.POST.get('apellidos')
         correo =  request.POST.get('correo')
@@ -54,7 +55,7 @@ def post_registrar(request):
 
         # Retorna una respuesta, redirige o renderiza otra página
         #return render(request, 'success.html', {'input_value': input_value})
-   return redirect('mostrar_login') 
+    return redirect('mostrar_login') 
 
 def mostrar_index(request):
     return render(request, '../templates/newsoftMain/index.html',version)
