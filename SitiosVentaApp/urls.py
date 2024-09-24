@@ -23,7 +23,7 @@ from django.shortcuts import redirect
 def redirigir_si_yeanpasten(request):
     if 'yeanpasten.cl' in request.get_host():
         # Redirigir a la vista de template7 si el dominio es yeanpasten.cl
-        return redirect('template7/')
+        return redirect('yean/')
     # Si no es yeanpasten.cl, puedes redirigir a otra página o mostrar un template
     return redirect('indice/')  # Redirige a otra página (home, por ejemplo)
 
@@ -56,7 +56,7 @@ urlpatterns = [
 
     path('template5/', views.mostrar_template5 ,name = 'mostrar_template5'),
     path('template6/', views.mostrar_template6 ,name = 'mostrar_template6'),
-    path('template7/', views.mostrar_template7 ,name = 'mostrar_template7'),
+    path('yean/', views.mostrar_template7 ,name = 'mostrar_template7'),
     path('template8/', views.mostrar_template8 ,name = 'mostrar_template8'),
     path('template9/', views.mostrar_template9 ,name = 'mostrar_template9'),
     path('template10/', views.mostrar_template10 ,name = 'mostrar_template10'),

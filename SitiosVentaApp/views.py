@@ -124,7 +124,7 @@ def mostrar_template6(request):
     return render(request, '../templates/Template6/index.html')
 
 def mostrar_template7(request):
-    return render(request, '../templates/Template7/index.html')
+    return render(request, '../templates/Template7/index.html',version)
 
 def mostrar_template8(request):
     return render(request, '../templates/Template8/index.html')
