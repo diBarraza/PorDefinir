@@ -701,7 +701,7 @@
                                 <textarea class="form-control" placeholder="Mensaje *" rows="7" ></textarea>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="form-control btn btn-primary" onclick="mensajeProntoDisponible()">Enviar Mensaje (¡PRONTO!)</button>
+                                <button type="submit" class="form-control btn btn-primary" id="enviarMensaje">Enviar Mensaje (¡PRONTO!)</button>
                             </div>
                         </form>
                     </div>
@@ -757,19 +757,22 @@
 </html>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    function mensajeProntoDisponible() {
-        
-        Swal.fire({
+    document.getElementById("enviarMensaje").addEventListener("click", function(event) {
+    event.preventDefault();  // Previene el envío del formulario o redirección
+    Swal.fire({
         title: 'Pronto Disponible',
         text: 'Pronto rellenando este formulario me podrás enviar un mensaje directo.',
-        icon: 'info', // Puedes usar 'success', 'error', 'warning', 'info', o 'question'
+        icon: 'info', 
         confirmButtonText: 'Entendido',
-        background: '#fff', // Color de fondo del modal
-        confirmButtonColor: '#3085d6', // Color del botón
+        background: '#fff',
+        confirmButtonColor: '#3085d6',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
         customClass: {
-            title: 'mi-titulo-personalizado', // Puedes aplicar clases personalizadas si es necesario
+            title: 'mi-titulo-personalizado', 
             popup: 'mi-popup-personalizado'
         }
     });
-    }
+});
+
 </script>
