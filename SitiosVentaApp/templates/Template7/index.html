@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with JohnDoe landing page.">
     <meta name="author" content="Devcrud">
-    <title>Yean Pasten Candidato a CORE 2024</title>
+    <title>Yean Pasten Galvez</title>
     <!-- font icons -->
     {%load static%}
     <link rel="stylesheet" href="{%static 'Template7/assets/vendors/themify-icons/css/themify-icons.css'%}?v={{ STATIC_VERSION }}">
@@ -59,7 +59,7 @@
 			<a href="{%url 'mostrar_portafolio'%}">
 				<h5 class="brand-title">Yean Pasten</h5>
 			</a>
-                        <div class="brand-subtitle">Candidato CORE | CORE 2024</div>
+                        <div class="brand-subtitle">PSICÓLOGO | CANDIDATO A CONSEJERO REGIONAL 2024</div>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -529,7 +529,7 @@
                                 <a class="img-popup" href="assets/imgs/advertising-3.jpg"></a>
                                 <div class="text-holder">
                                     <h6 class="title">TITULACIÓN</h6>
-                                    <p class="subtitle">Tecnico laboratorista.</p>
+                                    <p class="subtitle">Técnico Laboratorista Clínico.</p>
                                 </div>
                             </div>
                         </div>                                                       
@@ -690,18 +690,19 @@
                 <div class="col-lg-8">
                     <div class="contact-form-card">
                         <h4 class="contact-title">Envíame un mensaje</h4>
-                        <form action="">
+                        <form action="{% url 'enviar_mensaje' %}" method="POST">
+                            {% csrf_token %}
                             <div class="form-group">
-                                <input  class="form-control" type="text" placeholder="Nombre *" >
+                                <input name="nombre" class="form-control" required type="text" placeholder="Nombre *">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Email *" >
+                                <input name="email" class="form-control" required type="email" placeholder="Email *">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Mensaje *" rows="7" ></textarea>
+                                <textarea name="mensaje" class="form-control" required placeholder="Mensaje *" rows="7"></textarea>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="form-control btn btn-primary" id="enviarMensaje">Enviar Mensaje (¡PRONTO!)</button>
+                                <button type="submit" class="form-control btn btn-primary" id="enviarMensaje">Enviar Mensaje</button>
                             </div>
                         </form>
                     </div>
@@ -728,9 +729,9 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
+    
     <footer class="footer py-3">
         <div class="container">
             <p class="small mb-0 text-light">&copy; <script>document.write(new Date().getFullYear())</script> Yean Pastén Galvez. Todos los derechos reservados.</p>
@@ -755,24 +756,3 @@
 
 </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-    document.getElementById("enviarMensaje").addEventListener("click", function(event) {
-    event.preventDefault();  // Previene el envío del formulario o redirección
-    Swal.fire({
-        title: 'Pronto Disponible',
-        text: 'Pronto rellenando este formulario me podrás enviar un mensaje directo.',
-        icon: 'info', 
-        confirmButtonText: 'Entendido',
-        background: '#fff',
-        confirmButtonColor: '#3085d6',
-        allowOutsideClick: false,
-        allowEscapeKey: false,
-        customClass: {
-            title: 'mi-titulo-personalizado', 
-            popup: 'mi-popup-personalizado'
-        }
-    });
-});
-
-</script>

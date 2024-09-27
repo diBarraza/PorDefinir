@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from django.core.mail import send_mail
+from django.conf import settings
 import time 
 STATIC_VERSION = str(int(time.time()))
 version = {'STATIC_VERSION':STATIC_VERSION}
@@ -124,7 +126,26 @@ def mostrar_template6(request):
     return render(request, '../templates/Template6/index.html')
 
 def mostrar_template7(request):
+    
     return render(request, '../templates/Template7/index.html',version)
+
+def enviar_mensaje(request):
+    if request.method == 'POST':
+        nombre = request.POST['nombre']
+        email = request.POST['email']
+        mensaje = request.POST['mensaje']
+        
+        # Contenido del mensaje
+        subject = f'Nuevo mensaje de contacto de {nombre}'
+        message = f'Has recibido un nuevo mensaje de {nombre}.\n\nEmail: {email}\n\nMensaje:\n{mensaje}'
+        from_email = settings.DEFAULT_FROM_EMAIL
+        recipient_list = ['yeanmiguelpg@gmail.com']  # Destinatario
+        #print("Enviando mensaje...")
+        # Enviar el correo
+        send_mail(subject, message, from_email, recipient_list)
+
+        
+    return redirect('/yean')
 
 def mostrar_template8(request):
     return render(request, '../templates/Template8/index.html')

@@ -57,6 +57,7 @@ urlpatterns = [
     path('template5/', views.mostrar_template5 ,name = 'mostrar_template5'),
     path('template6/', views.mostrar_template6 ,name = 'mostrar_template6'),
     path('yean/', views.mostrar_template7 ,name = 'mostrar_template7'),
+    path('contacto_mensaje/', views.enviar_mensaje, name='enviar_mensaje'),
     path('template8/', views.mostrar_template8 ,name = 'mostrar_template8'),
     path('template9/', views.mostrar_template9 ,name = 'mostrar_template9'),
     path('template10/', views.mostrar_template10 ,name = 'mostrar_template10'),
